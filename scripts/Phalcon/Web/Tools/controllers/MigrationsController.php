@@ -88,7 +88,7 @@ class MigrationsController extends ControllerBase
 
                 \Phalcon\Migrations::generate(array(
                     'config' => Tools::getConfig(),
-                    'directory' => '.',
+                    'directory' => '..',
                     'tableName' => $tableName,
                     'exportData' => $exportData,
                     'migrationsDir' => $migrationsDir,

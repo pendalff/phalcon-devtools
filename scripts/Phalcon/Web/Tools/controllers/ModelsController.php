@@ -56,7 +56,7 @@ class ModelsController extends ControllerBase
                     'name'                  => $tableName,
                     'force'                 => $force,
                     'modelsDir'             => Tools::getConfig()->application->modelsDir,
-                    'directory'             => '.',
+                    'directory'             => '..',
                     'foreignKeys'           => $foreignKeys,
                     'defineRelations'       => $defineRelations,
                     'genSettersGetters'     => $genSettersGetters,

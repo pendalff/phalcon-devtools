@@ -59,7 +59,7 @@ class ScaffoldController extends ControllerBase
                     'schema' => $schema,
                     'force'	=> $force,
                     'genSettersGetters' => $genSettersGetters,
-                    'directory' => '.',
+                    'directory' => '..',
                     'templatePath' => TEMPLATE_PATH,
                     'templateEngine' => $templateEngine
                 ));
