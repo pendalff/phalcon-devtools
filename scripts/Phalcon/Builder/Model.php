@@ -367,12 +367,14 @@ class Model extends Component
                     else {
                         $entityNamespace = '';
                     }
+                    $referencedColumns = $reference->getReferencedColumns();
+                    $columns = $reference->getColumns();
                     $initialize[] = sprintf(
                         $templateRelation, 
-                        'hasMany', 
-                        $reference->getReferencedColumns()[0], 
+                        'hasMany',
+                        $referencedColumns[0],
                         $entityNamespace . ucfirst($tableName),
-                        $reference->getColumns()[0],
+                        $columns[0],
                         "array('alias' => '" . ucfirst($tableName) . "')"
                     );
                 }
@@ -385,12 +387,14 @@ class Model extends Component
             else {
                 $entityNamespace = '';
             }
+            $referencedColumns = $reference->getReferencedColumns();
+            $columns = $reference->getColumns();
             $initialize[] = sprintf(
                 $templateRelation,
                 'belongsTo',
-                $reference->getColumns()[0],
+                $columns[0],
                 $entityNamespace . ucfirst($reference->getReferencedTable()),
-                $reference->getReferencedColumns()[0],
+                $referencedColumns[0],
                 "array('alias' => '" . ucfirst($reference->getReferencedTable()) . "')"
             );
         }
