@@ -56,11 +56,11 @@ class ModelsController extends ControllerBase
                     'name'                  => $tableName,
                     'force'                 => $force,
                     'modelsDir'             => Tools::getConfig()->application->modelsDir,
-                    'directory'             => null,
+                    'directory'             => '.',
                     'foreignKeys'           => $foreignKeys,
                     'defineRelations'       => $defineRelations,
                     'genSettersGetters'     => $genSettersGetters,
-                    'namespace'             => null,
+                    'namespace'             => 'Application\\Model',
                 ));
 
                 $modelBuilder->build();

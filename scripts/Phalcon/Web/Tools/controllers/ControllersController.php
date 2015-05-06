@@ -45,7 +45,7 @@ class ControllersController extends ControllerBase
 
                 $controllerBuilder = new \Phalcon\Builder\Controller(array(
                     'name' => $controllerName,
-                    'directory' => null,
+                    'directory' => '.',
                     'namespace' => null,
                     'baseClass' => null,
                     'force' => $force
