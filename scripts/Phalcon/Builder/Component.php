@@ -57,7 +57,7 @@ abstract class Component
      */
     protected function _getConfig($path)
     {
-        foreach (array('app/config/', 'config/') as $configPath) {
+        foreach (array('app/config/', 'config/','../app/config/') as $configPath) {
             if (file_exists($path . $configPath . "/config.ini")) {
                 return new \Phalcon\Config\Adapter\Ini($path . $configPath . "/config.ini");
             } else {
